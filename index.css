@@ -494,3 +494,251 @@ body.light-mode .record-button.recording .record-button-inner { color: white; }
   .action-button { width: 44px; height: 44px; font-size: 16px; }
   .record-button { width: 64px; height: 64px; }
 }
+
+/* Tablet and smaller devices */
+@media (max-width: 1024px) {
+  .note-area {
+    padding: 24px 0 0;
+  }
+  
+  .note-header {
+    padding: 0 32px 14px;
+  }
+  
+  .editor-title {
+    font-size: 20px;
+  }
+  
+  .note-content-wrapper {
+    padding: 0 32px 32px;
+  }
+  
+  .recording-interface {
+    padding: 24px;
+  }
+  
+  :root {
+    --live-footer-height: 300px;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  :root {
+    --live-footer-height: 280px;
+  }
+  
+  .note-area {
+    padding: 16px 0 0;
+  }
+  
+  .note-header {
+    padding: 0 16px 12px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  
+  .editor-title {
+    font-size: 18px;
+    margin-right: 0;
+    padding: 0;
+  }
+  
+  .tab-navigation-container {
+    width: 100%;
+  }
+  
+  .tab-navigation {
+    width: 100%;
+  }
+  
+  .tab-button {
+    flex-grow: 1;
+    text-align: center;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  
+  .note-content-wrapper {
+    padding: 0 16px 16px;
+  }
+  
+  .note-content {
+    font-size: 15px;
+  }
+  
+  .note-content h1 { font-size: 1.6em; }
+  .note-content h2 { font-size: 1.4em; }
+  .note-content h3 { font-size: 1.2em; }
+  
+  .recording-interface {
+    padding: 16px;
+  }
+  
+  .recording-interface.is-live {
+    padding: 12px;
+  }
+  
+  #liveWaveformCanvas {
+    max-width: 100%;
+    height: 50px;
+    margin: 8px 0;
+  }
+  
+  .live-recording-timer {
+    font-size: 32px;
+    margin: 8px 0;
+  }
+  
+  .recording-controls {
+    gap: 16px;
+    padding: 12px 0;
+  }
+  
+  .action-button {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+  
+  .record-button {
+    width: 56px;
+    height: 56px;
+  }
+  
+  .record-button-inner {
+    width: 56px;
+    height: 56px;
+  }
+  
+  .record-waves {
+    width: 160px;
+    height: 160px;
+  }
+  
+  .record-text {
+    bottom: -24px;
+    font-size: 11px;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  :root {
+    --live-footer-height: 250px;
+  }
+  
+  .note-area {
+    padding: 12px 0 0;
+  }
+  
+  .note-header {
+    padding: 0 12px 10px;
+    gap: 10px;
+  }
+  
+  .editor-title {
+    font-size: 16px;
+  }
+  
+  .tab-button {
+    padding: 6px 8px;
+    font-size: 11px;
+  }
+  
+  .note-content-wrapper {
+    padding: 0 12px 12px;
+  }
+  
+  .note-content {
+    font-size: 14px;
+  }
+  
+  .recording-interface {
+    padding: 12px;
+  }
+  
+  .recording-interface.is-live {
+    padding: 8px;
+  }
+  
+  #liveWaveformCanvas {
+    height: 40px;
+    margin: 6px 0;
+  }
+  
+  .live-recording-timer {
+    font-size: 28px;
+    margin: 6px 0;
+  }
+  
+  .recording-controls {
+    gap: 12px;
+    padding: 8px 0;
+  }
+  
+  .action-button {
+    width: 36px;
+    height: 36px;
+    font-size: 13px;
+  }
+  
+  .record-button {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .record-button-inner {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .record-waves {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .record-text {
+    bottom: -22px;
+    font-size: 10px;
+  }
+}
+
+/* Handle viewport height on mobile devices */
+@media (max-height: 600px) {
+  :root {
+    --live-footer-height: 220px;
+  }
+  
+  .note-area {
+    padding: 12px 0 0;
+  }
+  
+  .recording-interface.is-live {
+    padding: 8px;
+  }
+  
+  #liveWaveformCanvas {
+    height: 36px;
+  }
+  
+  .live-recording-timer {
+    font-size: 24px;
+    margin: 4px 0;
+  }
+}
+
+/* Ensure minimum touch target sizes on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .action-button,
+  .tab-button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
+  .record-button {
+    min-width: 56px;
+    min-height: 56px;
+  }
+}
