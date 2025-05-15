@@ -414,10 +414,9 @@ body.light-mode .active-tab-indicator {
   align-items: center;
   justify-content: center;
   gap: 24px;
-  position: relative; /* For .record-text positioning */
-  /* This container is inside .recording-interface.
-     If .recording-interface.is-live has padding-bottom: 20px,
-     this whole control group will be 20px from the bottom of the fixed panel. */
+  position: relative;
+  margin-bottom: 50px; /* Add bottom margin */
+  transform: translateY(-50px); /* Move up by 50px */
 }
 
 .action-button {
@@ -569,6 +568,8 @@ body.light-mode .record-button.recording .record-button-inner { color: white; }
   .recording-controls {
     gap: 20px;
     padding: 16px 0;
+    margin-bottom: 60px; /* Slightly larger margin for mobile */
+    transform: translateY(-40px); /* Slightly less upward shift for mobile */
   }
   .action-button {
     width: 50px;
@@ -699,6 +700,8 @@ body.light-mode .record-button.recording .record-button-inner { color: white; }
   .recording-controls {
     gap: 16px;
     padding: 12px 0;
+    margin-bottom: 50px;
+    transform: translateY(-30px); /* Even less upward shift for small mobile */
   }
   
   .action-button {
@@ -781,6 +784,8 @@ body.light-mode .record-button.recording .record-button-inner { color: white; }
   .recording-controls {
     gap: 12px;
     padding: 8px 0;
+    margin-bottom: 50px;
+    transform: translateY(-30px); /* Even less upward shift for small mobile */
   }
   
   .action-button {
@@ -831,6 +836,11 @@ body.light-mode .record-button.recording .record-button-inner { color: white; }
   .live-recording-timer {
     font-size: 24px;
     margin: 4px 0;
+  }
+  
+  .recording-controls {
+    margin-bottom: 40px;
+    transform: translateY(-20px); /* Smaller shift for short screens */
   }
 }
 
